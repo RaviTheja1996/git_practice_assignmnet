@@ -1,14 +1,23 @@
 let num = 5;
 let count=0;
+for(let i = 2; i <= 10; i++)
+{
+  let flag = false;
+  for(let j = 1; j <= i; j++)
+    {
+      if(i%j === 0 && j !== 1 && i !== j)
+      {
+        flag = false;
+        break;
+      }
+      else
+      {
+        flag = true;
+      }
+    }
+  if(flag)
+  {
+    console.log(i);
+  }
+}
 
-for(let i=1;i<=num;i++){
-       if(num%i==0){
-    count++;
-        }
-}
-if(count==2){
-console.log("Prime Number");
-}
-else{
-console.log("Not a Prime Number");
-}
